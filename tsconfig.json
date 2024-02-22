@@ -14,11 +14,11 @@
     "noImplicitAny": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "commonjs", // Adjusted module setting
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false, // Adjusted noEmit setting
     "jsx": "react-jsx", 
     "baseUrl": "."
   },

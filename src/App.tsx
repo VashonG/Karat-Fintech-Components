@@ -1,20 +1,17 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import questTheme from 'src/QuestUiKitLightTheme';
-import Menu from 'src/components/Menu/Menu';
+import { ThemeProvider } from '@mui/material/styles';
+import questTheme from './QuestUiKitLightTheme';
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
     <HelmetProvider>
-      <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={questTheme}>
-          <Routes>
-            <Route path="/" element={<Menu />} />
-          </Routes>
-        </ThemeProvider>
-      </StyledEngineProvider>
+      <ThemeProvider theme={questTheme}>
+        <Routes>
+          <Route path="/" element={<Menu />} />
+        </Routes>
+      </ThemeProvider>
     </HelmetProvider>
   );
 }
